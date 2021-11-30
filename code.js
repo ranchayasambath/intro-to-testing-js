@@ -4,7 +4,7 @@ function helloWorld() {
 }
 // sayHello function
 function sayHello(){
-    return "Say Hello!";
+    return "";
 }
 // Test function
 function Test(){
