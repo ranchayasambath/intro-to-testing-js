@@ -31,13 +31,8 @@ describe("sayHello Unit Tests", function() {
     it("should return \"Hello, Pat!\" when called" , function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-});
-//Unit test for the Test function
-describe("Test", function() {
-    it("should be a defined function", function () {
-        expect(typeof Test).toBe("function");
-    });
-    it("should return a string when called", function(){
-        expect(typeof Test()).toBe("string");
+    it('should return "Hello, World!"', function(){
+        expect(sayHello("World")).toBe("Hello, World!");
     });
 });
+
