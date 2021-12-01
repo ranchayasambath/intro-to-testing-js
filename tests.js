@@ -16,7 +16,7 @@ describe('helloWorld Unit Tests', function() {
 // Unit test for the sayHello function
 describe("sayHello Unit Tests", function() {
     it("should be a defined function" , function(){
-        expect(sayHello).toBeDefined("function");
+        expect(typeof sayHello).toBeDefined("function");
     });
     //it("should return a string when called" , function(){
         //expect(typeof sayHello()).toBe("string");
@@ -43,7 +43,7 @@ describe("sayHello Unit Tests", function() {
 });
 describe('isFive', function(){
     it('it should define isFive when called', function(){
-        expect(typeof isFive()).toBe("boolean");
+        expect(typeof isFive).toBe("function");
     });
     it('should return a boolean no matter the input', function(){
         expect(typeof isFive()).toBe("boolean");
@@ -53,5 +53,69 @@ describe('isFive', function(){
     });
     it('should return false when called', function () {
         expect(isFive("5")).toBe(false);
+    });
+});
+describe('isEven', function (){
+    it('should define isEven when called', function(){
+        expect(typeof isEven).toBe("function");
+    });
+    it('should return a boolean no matter the input', function (){
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should return true when called', function () {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when called', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when called', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return true when called', function () {
+        expect(isEven("bananas")).toBe(false);
+    });
+    it('should return true when called', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when called', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when called', function () {
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when called', function () {
+        expect(isEven()).toBe(false);
+    });
+});
+describe('isVowel',function (){
+    it('should define isVowel when called', function (){
+        expect(typeof isVowel).toBe("function");
+    });
+    it('should return boolean no matter what the input', function(){
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return true if "isVowel"= a ', function(){
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true if "isVowel"= A ', function(){
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false if "isVowel"= y ', function(){
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false if "isVowel"= 4 ', function(){
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false if "isVowel"= true ', function(){
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false if "isVowel"= false ', function(){
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false if "isVowel"= banana ', function(){
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false if "isVowel"= "" ', function(){
+        expect(isVowel()).toBe(false);
     });
 });
