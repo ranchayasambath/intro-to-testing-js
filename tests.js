@@ -31,8 +31,14 @@ describe("sayHello Unit Tests", function() {
     it("should return \"Hello, Pat!\" when called" , function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
-    it('should return "Hello, World!"', function(){
+    it('should return "Hello, World!" when called', function(){
         expect(sayHello("World")).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" when called', function(){
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" when called', function(){
+        expect(sayHello(false)).toBe("Hello, World!");
     });
 });
 
