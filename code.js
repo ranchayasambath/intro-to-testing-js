@@ -28,3 +28,8 @@ function isEven(input){
 function isVowel(input){
     return('aeiouAEIOU'.indexOf(input) != -1);
 }
+function add(num1, num2){
+    return (parseInt(num1) + parseInt(num2));
+}
+
+console.log(add("banana", "split"));
